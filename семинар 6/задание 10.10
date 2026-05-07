@@ -1,3 +1,5 @@
-a = str(input("введите пожалуйста слово: "))
-print(f"Первые 3 символа: {a[0:3]}")
-print(f"Последние 3 символа: {a[-3:]}")
+text = input("введите пожалуйста строку: ")
+lower = "abcdefghijklmnopqrstuvwxyz"
+shifted = "bcdefghijklmnopqrstuvwxyza"
+table = str.maketrans(lower, shifted)
+print(text.translate(table))
