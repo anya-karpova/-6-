@@ -1,0 +1,16 @@
+#Напишите функцию, которая будет возвращать индекс 
+#минимального элемента в списке. Если их несколько, 
+#то вернет все минимальные положения.
+spisok = [17, -4, 8, 0, 23, -11, 5, 0, -3, 19, -11, 6, 14, -2]
+def min_index(spisok):
+    minimum = spisok[0] #говорим что цифра под индексом 0 - минимум
+    min_index = [0] #говорим что минимальный индекс - 0
+
+    for chislo in range (1, len(spisok)):    
+        if spisok[chislo] < minimum:        #если число меньше минимума, то его индекс записывается в chislo
+            minimum = spisok[chislo]        
+            min_index = [chislo]            
+        elif spisok[chislo] == minimum:     #если число равняется минимому, то мы его индекс приписываем 
+            min_index.append(chislo)    
+    return min_index
+print(min_index(spisok))
