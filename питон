@@ -1,3 +1,0 @@
-basket = ["black", "white","green", "red", "blue"]
-for i, ball in enumerate(basket): 
-        print(f"{i}-ый шар имеет цвет {ball}")

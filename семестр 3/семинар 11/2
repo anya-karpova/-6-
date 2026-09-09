@@ -1,0 +1,13 @@
+''''
+Напишите функцию, которая возвращает отсортированный методом
+ пузырька список. Для продвинутых: попробуйте написать 
+ декоратор, который будет отслеживать выполнение этой функции.
+'''
+spisok = [17, -4, 8, 0, 23, -11, 5, 0, -3, 19, -11, 6, 14, -2]
+def buble(spisok):
+    for podhod in range (len(spisok) - 1): #делаем количесво повторов цикла ниже
+        for chislo in range(len(spisok) - 1): #цикл для последовательного сравнения чисел слева направо
+            if spisok[chislo] > spisok[chislo + 1]:
+                spisok[chislo], spisok[chislo + 1] = spisok[chislo + 1], spisok[chislo]
+    return spisok
+print(buble(spisok))

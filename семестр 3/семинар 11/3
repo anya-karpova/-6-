@@ -1,0 +1,10 @@
+import random
+dlina = int(input())
+def random_dna(dlina):
+    dna = ''
+    nukleotids = ['А', 'Г', 'Ц', 'Т']
+    for i in range(dlina):
+        cep = random.choice(nukleotids)
+        dna = dna + cep
+    return(dna)
+print(random_dna(dlina))
