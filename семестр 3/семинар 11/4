@@ -1,0 +1,14 @@
+import random
+def chislo():
+    zagadano = random.randint(1, 100)
+
+    for i in range(10):
+        polsovatel = int(input())
+        if polsovatel < zagadano:
+            print('число больше, чем вы написали')
+        elif polsovatel > zagadano:
+            print('число меньше, чем вы написали')   
+        else:
+            print('вы угадали!')
+            break    
+print(chislo())        
