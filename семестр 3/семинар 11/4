@@ -1,8 +1,8 @@
 import random
 def chislo():
-    zagadano = random.randint(1, 100)
+    zagadano = random.randint(1, 100) #загадываем рандом число
 
-    for i in range(10):
+    for i in range(10): #10 попыток считаем
         polsovatel = int(input())
         if polsovatel < zagadano:
             print('число больше, чем вы написали')

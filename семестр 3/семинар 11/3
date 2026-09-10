@@ -1,10 +1,10 @@
 import random
-dlina = int(input())
+dlina = int(input("введите длину: "))
 def random_dna(dlina):
     dna = ''
     nukleotids = ['А', 'Г', 'Ц', 'Т']
-    for i in range(dlina):
+    for i in range(dlina): #сколько раз должен произойти цикл рандом
         cep = random.choice(nukleotids)
         dna = dna + cep
-    return(dna)
+    return(dna) #закончили, отдаем то что есть в dna
 print(random_dna(dlina))
