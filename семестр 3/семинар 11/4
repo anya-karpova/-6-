@@ -3,7 +3,7 @@ def chislo():
     zagadano = random.randint(1, 100) #загадываем рандом число
 
     for i in range(10): #10 попыток считаем
-        polsovatel = int(input())
+        polsovatel = int(input('введите пожалуйста число: '))
         if polsovatel < zagadano:
             print('число больше, чем вы написали')
         elif polsovatel > zagadano:
