@@ -6,7 +6,6 @@ class Triangle:
         if a + b <= c or a + c <= b or b + c <= a:
             raise ValueError ("Простите, но данный треугольник не может сущетсвовать")
 
-
         self.__a = a
         self.__b = b
         self.__c = c
@@ -32,7 +31,12 @@ class Triangle:
                 (self.__b ** 2 + self.__a ** 2 - self.__c ** 2) / (2 * self.__b * self.__a)))
         return angle_a, angle_b, angle_c
     
-triagle = Triagle(3, 4, 5)
-print("периметр:", triagle.perimeter)
-print("площадь:", triagle.square)
-print("Углы:", triangle.angles())
+try:
+    triangle = Triangle(3, 5, 7)
+
+    print("периметр:", triangle.perimeter)
+    print("площадь:", triangle.square)
+    print("углы:", triangle.angles())
+
+except ValueError as error:
+    print("ошибка:", error)
