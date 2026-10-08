@@ -37,9 +37,75 @@
 в формате FASTA.</p>
 <section id="seq">
 <h2>Класс Seq<a class="headerlink" href="#seq" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Seq">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.Seq" title="Link to this definition">¶</a></dt>
+<dd><p>Класс для хранения и анализа биологических последовательностей.
+:param header: Заголовок FASTA-записи.
+:type header: str
+:param sequence: Биологическая последовательность.
+:type sequence: str</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Seq.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.Seq.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Сохраняет заголовок FASTA и последовательность.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Seq.__len__">
+<span class="sig-name descname"><span class="pre">__len__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Seq.__len__" title="Link to this definition">¶</a></dt>
+<dd><p>Возвращает длину последовательности.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Seq.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Seq.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Возвращает информацию об объекте.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Seq.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Seq.__str__" title="Link to this definition">¶</a></dt>
+<dd><p>Возвращает последовательность в формате FASTA.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Seq.get_alphabet">
+<span class="sig-name descname"><span class="pre">get_alphabet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Seq.get_alphabet" title="Link to this definition">¶</a></dt>
+<dd><p>Определяет алфавит последовательности.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="fastareader">
 <h2>Класс FastaReader<a class="headerlink" href="#fastareader" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.FastaReader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">FastaReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.FastaReader" title="Link to this definition">¶</a></dt>
+<dd><p>Класс для чтения и проверки файлов формата FASTA.
+:param file_path: Путь к FASTA-файлу.
+:type file_path: str</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="main.FastaReader.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.FastaReader.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Сохраняет путь к файлу.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.FastaReader.is_fasta">
+<span class="sig-name descname"><span class="pre">is_fasta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.FastaReader.is_fasta" title="Link to this definition">¶</a></dt>
+<dd><p>Проверяет структуру FASTA-файла.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.FastaReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.FastaReader.read" title="Link to this definition">¶</a></dt>
+<dd><p>Читает FASTA-файл по записям.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 

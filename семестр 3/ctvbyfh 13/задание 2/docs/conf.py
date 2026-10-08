@@ -7,3 +7,4 @@ project = "FASTA Reader"
 language = "ru"
 extensions = ["sphinx.ext.autodoc"]
 html_theme = "alabaster"
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon"]
