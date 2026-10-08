@@ -1,6 +1,12 @@
+from pathlib import Path
 class Seq:
-    """Класс для работы с биологическими последовательностями."""
-
+    """
+    Класс для хранения и анализа биологических последовательностей.
+    :param header: Заголовок FASTA-записи.
+    :type header: str
+    :param sequence: Биологическая последовательность.
+    :type sequence: str
+    """
     def __init__(self, header, sequence):
         """Сохраняет заголовок FASTA и последовательность."""
         self.header = header
@@ -29,9 +35,14 @@ class Seq:
             return "белковая"
         else:
             return "неизвестная"
-class FastaReader:
-    """Класс для чтения файлов FASTA."""
 
+
+class FastaReader:
+    """
+    Класс для чтения и проверки файлов формата FASTA.
+    :param file_path: Путь к FASTA-файлу.
+    :type file_path: str
+    """
     def __init__(self, file_path):
         """Сохраняет путь к файлу."""
         self.file_path = file_path
@@ -72,16 +83,18 @@ class FastaReader:
             return True
         except (ValueError, OSError, UnicodeError):
             return False
-        
-if __name__ == "__main__":
-    reader = FastaReader("/Users/anakarpova/-6-/семестр 3/ctvbyfh 13/example.fasta")
 
+
+if __name__ == "__main__":
+    reader = FastaReader("example.fasta")
     try:
         for seq in reader.read():
             print(seq)
             print("Длина:", len(seq))
             print("Тип:", seq.get_alphabet())
             print()
-
     except Exception as error:
         print("Ошибка:", type(error).__name__, error)
+    print("Проверка формата FASTA:", reader.is_fasta())
+    invalid_reader = FastaReader("invalid.fasta")
+    print("Проверка неправильного FASTA:", invalid_reader.is_fasta())
